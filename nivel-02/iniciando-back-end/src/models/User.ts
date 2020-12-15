@@ -4,7 +4,9 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
+import Appointment from './Appointment';
 
 @Entity('users')
 class User {
@@ -19,6 +21,9 @@ class User {
 
   @Column()
   password: string;
+
+  @OneToMany(() => Appointment, appointment => appointment.provider)
+  appointment: Appointment;
 
   @Column()
   avatar: string;
