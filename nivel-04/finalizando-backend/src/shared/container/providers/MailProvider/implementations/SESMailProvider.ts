@@ -1,31 +1,24 @@
 import nodemailer, { Transporter } from 'nodemailer';
 import { injectable, inject } from 'tsyringe';
+import aws from 'aws-sdk';
 import mailConfig from '@config/mail';
 import IMailTemplateProvider from '../../MailTemplateProvider/models/IMailTemplateProvider';
 import ISendMailDTO from '../dtos/ISendMailDTO';
 import IMailProvider from '../models/IMailProvider';
 
 @injectable()
-export default class SparkPostMailProvider implements IMailProvider {
+export default class SESMailProvider implements IMailProvider {
   private client: Transporter;
 
   constructor(
     @inject('MailTemplateProvider')
     private mailTemplateProvider: IMailTemplateProvider,
   ) {
-    const { host, port, secure, auth } = mailConfig;
-
     this.client = nodemailer.createTransport({
-      host,
-
-      port,
-
-      secure,
-
-      auth: {
-        user: auth.user,
-        pass: auth.pass,
-      },
+      SES: new aws.SES({
+        apiVersion: '2010-12-01',
+        region: 'us-east-1',
+      }),
     });
   }
 

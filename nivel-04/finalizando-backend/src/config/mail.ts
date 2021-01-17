@@ -1,5 +1,5 @@
 interface IMailConfig {
-  driver: 'ethereal' | 'sparkpost';
+  driver: 'ethereal' | 'ses';
 
   defaults: {
     from: {
@@ -25,20 +25,8 @@ export default {
 
   defaults: {
     from: {
-      email: 'test@findgames.com.br',
+      email: 'test@celularsr.com.br',
       name: 'Victor',
     },
-  },
-
-  host: 'smtp.sparkpostmail.com',
-
-  port: 587,
-
-  secure: false,
-
-  auth: {
-    user: 'SMTP_Injection',
-
-    pass: process.env.SPARKPOST_API_KEY,
   },
 } as IMailConfig;
