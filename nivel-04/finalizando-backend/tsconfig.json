@@ -3,10 +3,10 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "src",
     "strict": true,
     "strictPropertyInitialization": false,
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "allowJs": true,
     "paths": {
       "@modules/*":["modules/*"],
@@ -18,5 +18,15 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+    ".idea",
+    "build",
+    "node_modules",
+    "typings/globals",
+    "typings/modules",
+    "coverage",
+    "jest.config.js",
+    "prettier.config.js"
+  ]
 }

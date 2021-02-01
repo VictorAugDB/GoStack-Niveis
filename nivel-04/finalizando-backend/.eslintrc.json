@@ -32,7 +32,11 @@
       {
         "selector": "interface",
         "prefix": ["I"],
-        "format": ["PascalCase"]
+        "format": ["PascalCase"],
+        "filter": {
+          "regex": "Request",
+          "match": false
+        }
       }
     ],
     "no-useless-constructor": "off",

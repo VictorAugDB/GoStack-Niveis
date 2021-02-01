@@ -25,7 +25,7 @@ export default {
 
   defaults: {
     from: {
-      email: 'test@celularsr.com.br',
+      email: 'victor@celularsr.com.br',
       name: 'Victor',
     },
   },

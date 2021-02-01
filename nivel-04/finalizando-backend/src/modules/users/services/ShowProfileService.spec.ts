@@ -1,4 +1,4 @@
-import AppError from '@shared/errors/appError';
+import AppError from '@shared/errors/AppError';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 
 import ShowProfileService from './ShowProfileService';

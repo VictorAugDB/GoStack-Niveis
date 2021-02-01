@@ -1,4 +1,4 @@
-import AppError from '@shared/errors/appError';
+import AppError from '@shared/errors/AppError';
 import { injectable, inject } from 'tsyringe';
 import { isAfter, addHours } from 'date-fns';
 
