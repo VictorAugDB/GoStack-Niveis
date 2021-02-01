@@ -3,14 +3,14 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'appgobarber' do
+target 'finalizando_frontend_mobile_do_app' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'RNDateTimePicker', :path => '../node_modules/@react-native-community/datetimepicker'
 
-  target 'appgobarberTests' do
+  target 'finalizando_frontend_mobile_do_appTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,10 +25,10 @@ target 'appgobarber' do
   end
 end
 
-target 'appgobarber-tvOS' do
-  # Pods for appgobarber-tvOS
+target 'finalizando_frontend_mobile_do_app-tvOS' do
+  # Pods for finalizando_frontend_mobile_do_app-tvOS
 
-  target 'appgobarber-tvOSTests' do
+  target 'finalizando_frontend_mobile_do_app-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

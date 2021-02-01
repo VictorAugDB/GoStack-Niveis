@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
 interface ContainerProps {
@@ -16,13 +16,13 @@ export const Container = styled.View<ContainerProps>`
   border: 2px;
   border-color: #232129;
 
-  ${props =>
+  ${(props) =>
     props.isErrored &&
     css`
       border-color: #c53030;
     `}
 
-  ${props =>
+  ${(props) =>
     props.isFocused &&
     css`
       border-color: #ff9000;

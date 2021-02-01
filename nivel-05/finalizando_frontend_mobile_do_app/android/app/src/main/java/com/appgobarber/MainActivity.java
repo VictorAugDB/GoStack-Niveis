@@ -1,4 +1,4 @@
-package com.appgobarber;
+package com.finalizando_frontend_mobile_do_app;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "appgobarber";
+    return "finalizando_frontend_mobile_do_app";
   }
 }

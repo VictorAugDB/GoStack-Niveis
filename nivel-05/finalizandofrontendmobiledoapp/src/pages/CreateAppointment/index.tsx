@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { useRoute, useNavigation } from '@react-navigation/native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {useRoute, useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -15,7 +15,7 @@ import {
   ProviderAvatar,
   ProviderName,
 } from './styles';
-import { useAuth } from '../../hooks/auth';
+import {useAuth} from '../../hooks/auth';
 import api from '../../services/api';
 
 interface RouteParams {
@@ -29,9 +29,9 @@ export interface Provider {
 }
 
 const CreateAppointment: React.FC = () => {
-  const { user } = useAuth();
+  const {user} = useAuth();
   const route = useRoute();
-  const { goBack } = useNavigation();
+  const {goBack} = useNavigation();
   const routeParams = route.params as RouteParams;
 
   const [providers, setProviders] = useState<Provider[]>([]);
@@ -40,7 +40,7 @@ const CreateAppointment: React.FC = () => {
   );
 
   useEffect(() => {
-    api.get('providers').then(response => {
+    api.get('providers').then((response) => {
       setProviders(response.data);
     });
   }, []);
@@ -62,7 +62,7 @@ const CreateAppointment: React.FC = () => {
 
         <HeaderTitle>Cabeleireiros</HeaderTitle>
 
-        <UserAvatar source={{ uri: user.avatar_url }} />
+        <UserAvatar source={{uri: user.avatar_url}} />
       </Header>
 
       <ProvidersListContainer>
@@ -70,13 +70,12 @@ const CreateAppointment: React.FC = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           data={providers}
-          keyExtractor={provider => provider.id}
-          renderItem={({ item: provider }) => (
+          keyExtractor={(provider) => provider.id}
+          renderItem={({item: provider}) => (
             <ProviderContainer
               onPress={() => handleSelectProvider(provider.id)}
-              selected={provider.id === selectedProvider}
-            >
-              <ProviderAvatar source={{ uri: provider.avatar_url }} />
+              selected={provider.id === selectedProvider}>
+              <ProviderAvatar source={{uri: provider.avatar_url}} />
               <ProviderName selected={provider.id === selectedProvider}>
                 {provider.name}
               </ProviderName>

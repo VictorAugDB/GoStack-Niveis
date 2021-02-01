@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.appgobarber">
+  package="com.finalizando_frontend_mobile_do_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
