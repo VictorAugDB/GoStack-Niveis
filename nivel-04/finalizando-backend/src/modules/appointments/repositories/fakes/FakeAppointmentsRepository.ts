@@ -8,7 +8,7 @@ import IFindAllInDayFromProviderDTO from '@modules/appointments/dtos/IFindAllInD
 import Appointment from '../../infra/typeorm/entities/Appointment';
 import IFindAllInMonthFromProviderDTO from '../../dtos/IFindAllInMonthFromProviderDTO';
 
-class AppointmentsRepository implements IAppointmentsRepository {
+class FakeAppointmentsRepository implements IAppointmentsRepository {
   private appointments: Appointment[] = [];
 
   public async findByDate(
@@ -73,4 +73,4 @@ class AppointmentsRepository implements IAppointmentsRepository {
   }
 }
 
-export default AppointmentsRepository;
+export default FakeAppointmentsRepository;

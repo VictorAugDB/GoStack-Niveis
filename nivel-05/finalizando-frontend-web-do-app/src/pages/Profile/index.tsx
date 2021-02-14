@@ -83,6 +83,8 @@ const Profile: React.FC = () => {
 
         const response = await api.put('/profile', formData);
 
+        console.log('asd');
+
         updateUser(response.data.user);
 
         addToast({
@@ -148,6 +150,7 @@ const Profile: React.FC = () => {
             email: user.email,
           }}
           onSubmit={handleSubmit}
+          data-testid="profile-form"
         >
           <AvatarInput>
             <img src={user.avatar_url} alt={user.name} />
