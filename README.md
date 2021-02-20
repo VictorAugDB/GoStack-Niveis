@@ -8,7 +8,7 @@
 
 ### Nível-05: Finalizando-frontend-mobile-do-app (final frontend mobile);
 
-## Endenreço do Deploy da aplicação:
+## Endereço do Deploy da aplicação:
 www.reactdeploy.celularsr.com.br
 
 para instalar as dependências
